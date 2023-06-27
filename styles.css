@@ -1,5 +1,7 @@
 :root {
     --sidebar-font-color: white;
+    --sidebar-margins: 18px;
+    --profile-pic-width: 2.7vw;
 }
 
 *{
@@ -18,7 +20,7 @@ body {
     height: 100vh;
     width: 100vw;
     display: grid;
-    grid-template: 1fr 5fr / 1fr 4fr;
+    grid-template: 1fr 1fr / 1fr 4fr;
 }
 
 /* SIDEBAR */
@@ -46,28 +48,27 @@ body {
     display: flex;
     align-items: center;
     font-size: 22px;
-    margin: 15px;
-    gap: 15px;
+    margin: var(--sidebar-margins);
+    gap: var(--sidebar-margins);
+}
+
+.menu ul, .menu li {
+    display: flex;
+    gap: var(--sidebar-margins);
 }
 
 .menu ul {
-    display: flex;
     flex-direction: column;
-    gap: 18px;
 }
 
 .menu ul li {
-    display: flex;
     margin: 0 25px;
-    gap: 15px;
 }
 
 .menu svg {
     height: 20px;
     fill: var(--sidebar-font-color);
 }
-
-
 
 /* HEADER */
 
@@ -76,8 +77,38 @@ body {
     grid-template-rows: repeat(2, 1fr);
 }
 
+.header svg {
+    height: 20px;
+}
+
 .header-top, .header-bottom {
     display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    background-image: url(./images/bron.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: var(--profile-pic-width);
+    height: var(--profile-pic-width);
+    border-radius: 50%;
+}
+
+.profile-pic.big {
+    width: calc(var(--profile-pic-width) + 1.3vw);
+    height: calc(var(--profile-pic-width) + 1.3vw);
+}
+
+.greeting p {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.greeting span {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 /* MAIN CONTENT */
