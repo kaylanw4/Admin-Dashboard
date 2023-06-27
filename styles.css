@@ -34,6 +34,7 @@ body {
     background: #1A92D3;
     display: grid;
     grid-template-rows: 1fr 10fr;
+    gap: 30px;
 }
 
 .logo svg{
@@ -52,7 +53,7 @@ body {
 .menu ul {
     display: flex;
     flex-direction: column;
-
+    gap: 18px;
 }
 
 .menu ul li {
