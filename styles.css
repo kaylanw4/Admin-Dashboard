@@ -20,8 +20,8 @@ body {
 }
 
 .container {
-    height: 100vh;
-    width: 100vw;
+    /* height: 100vh;
+    width: 100vw; */
     display: grid;
     grid-template: 1fr minmax(200px, 5fr) / 1fr 4fr;
 }
@@ -132,6 +132,7 @@ input {
     width: var(--profile-pic-width);
     height: var(--profile-pic-width);
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .profile-pic.big {
@@ -175,6 +176,8 @@ button:hover {
     background: var(--main-color);
     display: grid;
     grid-template: 50px 1fr / 3fr 1fr;
+    padding: 0 var(--sidebar-margins);
+    gap: 12px;
 }
 
 .ann-trending {
@@ -186,9 +189,43 @@ button:hover {
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(2, 1fr);
     gap: 20px;
-    margin: 0 20px;
+}
+
+.project-header, .announcement-header {
+    font-size: 18px;
+    font-weight: bold;
+    align-self: self-end;
 }
 
 .project-card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    border-left: 8px solid orange;
     background-color: white;
+    padding: 30px 20px;
+    gap: 15px;
+}
+
+.project-card p {
+    color: gray;
+    font-size: 14px;
+}
+
+.project-card span {
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.project-card .card-icons {
+    align-self: self-end;
+}
+
+.project-card svg {
+    height: 22px;
+    margin: 0 15px;
 }
