@@ -142,7 +142,6 @@ input:focus {
 /* PROFILE PICTURES */
 
 .profile-pic {
-    background-image: url(./images/bron.webp);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -150,6 +149,26 @@ input:focus {
     height: var(--profile-pic-width);
     border-radius: 50%;
     cursor: pointer;
+}
+
+.header .profile-pic {
+    background-image: url(./images/bron.webp);
+}
+
+.profile-pic.tegan {
+    background-image: url(./images/astronaut.jpg);
+}
+
+.profile-pic.morgan {
+    background-image: url(./images/green.jpg);
+}
+
+.profile-pic.kendall {
+    background-image: url(./images/monkey.jpg);
+}
+
+.profile-pic.alex {
+    background-image: url(./images/porsche.jpg);
 }
 
 .profile-pic.big {
@@ -228,7 +247,7 @@ button:hover, a svg:hover {
     gap: var(--global-gap);
 }
 
-.project-card:hover, .ann:hover {
+.project-card:hover, .ann:hover, .profile:hover {
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
     transition: all 0.2s;
     outline: 2px solid lightblue;
@@ -291,4 +310,6 @@ button:hover, a svg:hover {
     display: flex;
     align-items: center;
     gap: var(--global-gap);
+    border-radius: 100px;
+    cursor: pointer;
 }
