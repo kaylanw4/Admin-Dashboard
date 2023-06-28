@@ -6,7 +6,8 @@
     --shadow: rgba(0, 0, 0, 0.10) 0px 2px 5px;
     --main-color: rgb(237, 237, 237);
     --card-color: white;
-    --global-gap: 18px
+    --global-gap: 18px;
+    --subtext-color: gray;
 }
 
 *{
@@ -191,11 +192,11 @@ button:hover, a svg:hover {
 .content {
     background: var(--main-color);
     display: grid;
-    grid-template: 50px 1fr / 3fr 1fr;
+    grid-template: max-content 1fr / 1fr 300px;
     padding: 0 var(--sidebar-margins) 75px;
-    gap: 12px;
-}
+    column-gap: var(--global-gap);
 
+}
 
 .project-body {
     display: grid;
@@ -204,13 +205,14 @@ button:hover, a svg:hover {
     gap: var(--global-gap);
 }
 
-.project-header, .announcement-header {
+.project-header, .announcement-header, .trending-header {
     font-size: 18px;
     font-weight: bold;
     align-self: self-end;
+    padding: 30px 0 12px 0;
 }
 
-.project-card, .announcement-card {
+.project-card, .announcement-card, .trending-card {
     background-color: var(--card-color);
     position: relative;
     box-shadow: var(--shadow);
@@ -219,10 +221,9 @@ button:hover, a svg:hover {
 
 .project-card {
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
     cursor: pointer;
-    padding: 30px 20px;
+    padding: 20px;
     border-left: 8px solid orange;
     gap: var(--global-gap);
 }
@@ -234,15 +235,10 @@ button:hover, a svg:hover {
     transform: scale(1.01, 1.01);
 }
 
-.project-card p {
-    color: gray;
+.project-card p, .profile p {
+    color: var(--subtext-color);
     font-size: 14px;
-}
-
-.project-card span {
-    color: black;
-    font-size: 17px;
-    font-weight: bold;
+    flex: 1;
 }
 
 .project-card .card-icons {
@@ -258,7 +254,7 @@ button:hover, a svg:hover {
 
 .ann-trending {
     display: grid;
-    grid-template-rows: 1fr 50px 1fr;
+    grid-template-rows: repeat(3, max-content);
 }
 
 .announcement-card {
@@ -269,18 +265,30 @@ button:hover, a svg:hover {
 }
 
 .ann {
+    display: flex;
+    flex-direction: column;
     border-radius: 20px;
     padding: 0 10px;
+    gap: calc(var(--global-gap) / 2);
     cursor: pointer;
 }
 
 .ann p{
-    color: gray;
+    color: var(--subtext-color);
     font-size: 12px;
 }
 
-.ann span {
-    color: black;
-    font-size: 14px;
-    font-weight: bold;
+/* TRENDING */
+
+.trending-card {
+    display: grid;
+    grid-template-rows: repeat(4, max-content);
+    padding: 30px;
+    gap: var(--global-gap);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: var(--global-gap);
 }
