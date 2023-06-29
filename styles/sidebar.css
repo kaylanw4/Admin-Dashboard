@@ -1,0 +1,82 @@
+:root {
+    --sidebar-color: #1992D4;
+    --sidebar-font-color: white;
+    --sidebar-margins: 18px;
+    --profile-pic-width: 40px;
+    --shadow: rgba(0, 0, 0, 0.10) 0px 2px 5px;
+    --main-color: rgb(237, 237, 237);
+    --card-color: white;
+    --global-gap: 18px;
+    --subtext-color: gray;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template: max-content minmax(200px, 5fr) / max-content 5fr;
+}
+
+/* SIDEBAR */
+
+.menu a {
+    color: var(--sidebar-font-color);
+    text-decoration: none;
+}
+
+.sidebar {
+    grid-row: span 2;
+    color: var(--sidebar-font-color);
+    background: var(--sidebar-color);
+    display: grid;
+    grid-template-rows: max-content max-content 10fr;
+    gap: 30px;
+    padding: 18px;
+}
+
+.horiz-divider {
+    background-color: var(--sidebar-font-color);
+    opacity: 0.7;
+    height: 1px;
+    width: 100%;
+}
+
+.logo svg{
+    height: 40px;
+    fill: var(--sidebar-font-color);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    gap: 10px;
+}
+
+.menu ul, .menu li {
+    display: flex;
+    gap: var(--global-gap);
+}
+
+.menu ul {
+    flex-direction: column;
+}
+
+.menu li {
+    /* margin: 0 25px; */
+    font-weight: bold;
+}
+
+.menu svg {
+    height: 20px;
+    fill: var(--sidebar-font-color);
+}
+
+.menu a:hover{
+    text-decoration: underline;
+}

@@ -1,0 +1,124 @@
+/* HEADER */
+
+.header {
+    display: grid;
+    position: relative;
+    grid-template-rows: repeat(2, 1fr);
+    box-shadow: var(--shadow);
+    padding: 18px 0;
+    gap: var(--global-gap);
+}
+
+.header svg {
+    height: 20px;
+}
+
+.header-top, .header-bottom {
+    display: flex;
+    align-items: center;
+    gap: var(--global-gap);
+    margin: 0 40px;
+    white-space: nowrap;
+}
+
+.divider {
+    background-color: var(--main-color);
+    height: 100%;
+    width: 1px;
+}
+
+/* HEADER-TOP */
+
+form {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: var(--global-gap);
+}
+
+input {
+    background-color: var(--main-color);
+    width: clamp(400px, 80%, 800px);
+    height: 28px;
+    border: none;
+    border-radius: 80px;
+    margin-bottom: 5px;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+    padding: 10px 12px;
+
+}
+
+.profile-name {
+    font-weight: bold;
+}
+
+/* PROFILE PICTURES */
+
+.profile-pic {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: var(--profile-pic-width);
+    height: var(--profile-pic-width);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.header .profile-pic {
+    background-image: url(../images/bron.webp);
+}
+
+.profile-pic.tegan {
+    background-image: url(../images/astronaut.jpg);
+}
+
+.profile-pic.morgan {
+    background-image: url(../images/green.jpg);
+}
+
+.profile-pic.kendall {
+    background-image: url(../images/monkey.jpg);
+}
+
+.profile-pic.alex {
+    background-image: url(../images/porsche.jpg);
+}
+
+.profile-pic.big {
+    width: calc(var(--profile-pic-width) + 18px);
+    height: calc(var(--profile-pic-width) + 18px);
+}
+
+/* HEADER-BOTTOM */
+
+.greeting {
+    flex: 1;
+}
+
+.greeting p {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.greeting span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.button {
+    padding: 10px 25px;
+    color: var(--sidebar-font-color);
+    background-color: var(--sidebar-color);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+button:hover, a svg:hover {
+    transform: scale(1.05, 1.05);
+}
